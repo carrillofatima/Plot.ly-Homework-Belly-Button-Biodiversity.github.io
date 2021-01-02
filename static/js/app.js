@@ -98,4 +98,41 @@ Plotly.newPlot("bubble",bubble_data, layout_bubble);
 });
 }
 
+//Gauge attempt
+var myGauge = [
+    {
+      domain: { x: [0, 1], y: [0, 1] },
+      value: results1.wfreq,
+      title: { text: "<b>Belly Button Washing Frequency</b> <br>Scubs per Week"},
+    //   height: 500,
+    //   width: 500,
+      type: "indicator",
+      mode: "gauge+number",
+    //   delta: { reference: 380 },
+      gauge: {
+        axis: { range: [null, 9] },
+        steps: [
+          { range: [0, 1], color: 'rgb(248, 243, 236)' },
+		  { range: [1, 2], color: 'rgb(244, 241, 229)' },
+		  { range: [2, 3], color: 'rgb(233, 230, 202)' },
+		  { range: [3, 4], color: 'rgb(229, 231, 179)' },
+		  { range: [4, 5], color: 'rgb(213, 228, 157)' },
+		  { range: [5, 6], color: 'rgb(183, 204, 146)' },
+		  { range: [6, 7], color: 'rgb(140, 191, 136)' },
+		  { range: [7, 8], color: 'rgb(138, 187, 143)' },
+		  { range: [8, 9], color: 'rgb(133, 180, 138)' },
+        ],
+        labels: ["8-9", "7-8", "6-7", "5-6", "4-5", "3-4", "2-3", "1-2", "0-1", ""],
+      hoverinfo: "label"
+        // threshold: {
+        //   line: { color: "red", width: 4 },
+        //   thickness: 0.75,
+        //   value: 490
+        
+      }
+    }
+  ];
+  
+  var layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
+  Plotly.newPlot('gauge', myGauge, layout);
 
