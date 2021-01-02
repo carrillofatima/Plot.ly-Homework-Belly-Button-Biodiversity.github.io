@@ -75,16 +75,16 @@ Plotly.newPlot("bubble",bubble_data, layout_bubble);
 
 
 //BONUS: Gauge attempt
-var wfreqData =demoData.filter(wid => wid.id == wfreq);
+// var wfreqData =demoData.filter(wid => wid.id == wfreq);
   // fetch the first element
-  var wfreqResults = wfreqData[0];
-  console.log(wfreqResults)
+  // var wfreqResults = wfreqData[0];
+  // console.log(wfreqResults)
 
   
 var myGauge = [
     {
       domain: { x: [0, 1], y: [0, 1] },
-      value: wfreqResults.wfreq,
+      value: demoData.wfreq,
       title: { text: "<b>Belly Button Washing Frequency</b> <br>Scubs per Week"},
     //   height: 500,
     //   width: 500,
